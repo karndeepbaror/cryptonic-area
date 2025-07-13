@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Cryptonic Area</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="login-container">
+    <h2 class="login-title">Login to Cryptonic Area</h2>
+
+    <form class="login-form">
+      
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email" class="label">Email Address</label>
+        <input type="email" id="email" name="email" class="input" placeholder="you@example.com" required />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group password-wrapper">
+        <label for="password" class="label">Password</label>
+        <input type="password" id="password" name="password" class="input" placeholder="********" required />
+        <span onclick="togglePassword()" class="toggle-password">Show</span>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-login">Login</button>
+
+      <!-- Links -->
+      <div class="login-footer">
+        <a href="#" class="forgot-link">Forgot Password?</a>
+        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("password");
+      input.type = input.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>
