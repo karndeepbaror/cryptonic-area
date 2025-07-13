@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptonic Area | Cybersecurity Training</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body class="font-sans bg-[#0d0d1a] text-white">
+
+<header id="navbar" class="fixed top-0 w-full bg-transparent transition-all z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="text-2xl font-bold text-cyan-400">CRYPTONIC AREA</div>
+    <nav class="space-x-6 text-gray-300">
+      <a href="#home" class="hover:text-cyan-400">Home</a>
+      <a href="#courses" class="hover:text-cyan-400">Courses</a>
+      <a href="#features" class="hover:text-cyan-400">Why Us</a>
+      <a href="#contact" class="hover:text-cyan-400">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home" class="pt-20">
+
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center h-screen text-center bg-gradient-to-b from-[#181827] to-[#121221]" data-aos="fade-in">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-cyan-300 mb-4">Become a Cybersecurity Pro.</h1>
+      <p class="text-gray-400 mb-8">Live labs, real techniques, career-focused training by industry experts.</p>
+      <a href="#courses" class="inline-block bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-semibold">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- Course Slider -->
+  <section id="courses" class="py-16 bg-[#0d0d1a]">
+    <h2 class="text-3xl font-bold text-cyan-400 text-center mb-8" data-aos="fade-up">Popular Courses</h2>
+    <div class="swiper mySwiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-[#1a1a2e] p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Ethical Hacking 101</h3>
+          <p class="text-gray-400 mb-4">Start your hacking journey with hands-on labs.</p>
+          <a href="#" class="text-cyan-400 hover:underline">Learn more</a>
+        </div>
+        <div class="swiper-slide bg-[#1a1a2e] p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Bug Bounty Mastery</h3>
+          <p class="text-gray-400 mb-4">Discover live vulnerabilities & disclosure.</p>
+          <a href="#" class="text-cyan-400 hover:underline">Learn more</a>
+        </div>
+        <div class="swiper-slide bg-[#1a1a2e] p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-cyan-300 mb-2">Red Team Ops</h3>
+          <p class="text-gray-400 mb-4">Advanced simulation & stealth training.</p>
+          <a href="#" class="text-cyan-400 hover:underline">Learn more</a>
+        </div>
+      </div>
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-[#121221] text-center" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-4xl font-bold text-cyan-400"><span id="count1">0</span>+</h3>
+        <p class="text-gray-400">Students Trained</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-cyan-400"><span id="count2">0</span>+</h3>
+        <p class="text-gray-400">Live Labs Completed</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-cyan-400"><span id="count3">0</span>+</h3>
+        <p class="text-gray-400">Global Certifications</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+<script>
+  AOS.init({ duration: 800 });
+  new Swiper(".mySwiper", { slidesPerView: 1.2, spaceBetween: 20, centeredSlides: true, pagination: { el: ".swiper-pagination", clickable: true }, breakpoints: { 640:{slidesPerView:2},1024:{slidesPerView:3} } });
+  const c1=new CountUp('count1',1500); const c2=new CountUp('count2',300); const c3=new CountUp('count3',500);
+  window.addEventListener("load",()=>{c1.start();c2.start();c3.start();});
+  window.addEventListener("scroll",()=>{
+    document.getElementById('navbar').classList.toggle('bg-[#121221]', window.scrollY>50);
+  });
+</script>
